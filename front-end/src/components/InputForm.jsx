@@ -1,18 +1,77 @@
-import React, {useState} from 'react';
+import React from "react";
+import { useFormik } from "formik";
+import { geoCode } from "@/utils/geoCode";
 
 const InputForm = () => {
-    const [startLocation, setStartLocation] = useState('');
-    const [endLocation, setendLocation] = useState('');
+  const formik = useFormik({
+    initialValues: {
+      startingLocation: "",
+      destinationLocation: "",
+    },
+    onSubmit: async (values) => {
+      console.log("Form values are valid:", values);
+    },
+    validate: (values) => {
+      let errors = {};
+
+      if (!values.startingLocation) {
+        errors.startingLocation = "Starting location is required!";
+      }
+
+      if (!values.destinationLocation) {
+        errors.destinationLocation = "Destination location is required!";
+      }
+
+      return errors;
+    },
+  });
+
   return (
-    <form style={{ background: 'rgba(255, 255, 255, 0.8)', padding: '20px', borderRadius: '8px' }}>
-      <div style={{ marginBottom: '10px' }}>
-        <label htmlFor="starting-place" style={{ marginRight: '10px' }}>Choose a starting place</label>
-        <input type="text" id="starting-place" placeholder="Enter a location" />
+    <form
+      onSubmit={formik.handleSubmit}
+      style={{
+        background: "rgba(255, 255, 255, 0.8)",
+        padding: "20px",
+        borderRadius: "8px",
+      }}
+    >
+      <div style={{ marginBottom: "10px" }}>
+        <label htmlFor="startingLocation" style={{ marginRight: "10px" }}>
+          Choose a starting place
+        </label>
+        <input
+          type="text"
+          id="startingLocation"
+          name="startingLocation"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.startingLocation}
+          placeholder="Enter a location"
+        />
+        {formik.touched.startingLocation && formik.errors.startingLocation ? (
+          <div>{formik.errors.startingLocation}</div>
+        ) : null}
       </div>
-      <div style={{ marginBottom: '10px' }}>
-        <label htmlFor="destination" style={{ marginRight: '10px' }}>Choose destination</label>
-        <input type="text" id="destination" placeholder="Enter a destination" />
+
+      <div style={{ marginBottom: "10px" }}>
+        <label htmlFor="destinationLocation" style={{ marginRight: "10px" }}>
+          Choose destination
+        </label>
+        <input
+          type="text"
+          id="destinationLocation"
+          name="destinationLocation"
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values.destinationLocation}
+          placeholder="Enter a destination"
+        />
+        {formik.touched.destinationLocation &&
+        formik.errors.destinationLocation ? (
+          <div>{formik.errors.destinationLocation}</div>
+        ) : null}
       </div>
+
       <button type="submit">Get me there safe!</button>
     </form>
   );
