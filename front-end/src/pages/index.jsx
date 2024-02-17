@@ -6,16 +6,26 @@ import styles from "@/styles/Home.module.css";
 
 export default function Home() {
   const dashboardStyle = {
-    backgroundImage: `url(/background.jpg)`, // Ensure you have the correct path
-    backgroundSize: 'cover', // Cover the entire area
-    backgroundPosition: 'center', // Center the background image
-    height: '95vh', // Full height of the viewport
-    width: '100vw', // Full width of the viewport
+    backgroundImage: `url(/background.jpg)`, 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    height: '95vh', 
+    width: '100vw', 
 
   };
   return (
     <div style={dashboardStyle}>
+      <h1 className={styles.dashboardHeading}>Smooth ride, every time</h1>
+      <h3 className={styles.dashboardSmallHeading}>Try our app to search the most accessible</h3>
+      <h3 className={styles.dashboardSmallHeading}>routes during snowstorms</h3>
+      <div className={styles.buttonContainer}>
+      <button className={styles.dashboardButton}>  SEARCH NOW
+  <img src="./loop.png" alt="Search Icon" className={styles.searchIcon} />
 
+</button>
+
+      </div>
     </div>
   );
+  
 }
