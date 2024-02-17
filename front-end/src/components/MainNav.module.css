@@ -1,0 +1,50 @@
+.navbarLink2{
+    margin-right: 20%;
+    color:black;
+}
+.navbarLink1{
+    margin-right: 20%;
+    color:black;
+}
+
+.navbarLink2:hover{
+    color:rgb(102, 102, 102);
+}
+
+.navbarLink1:hover{
+    color:rgb(102, 102, 102);
+}
+.profile {
+    margin-right: 20%;
+    color:black;
+}
+
+.profile:hover {
+    filter: brightness(50%);
+}
+
+.navbarBrand {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .logo {
+    width: 60px; 
+    height: auto;
+    margin-right: 10px; 
+  }
+
+  .toggle {
+    margin-right: 5%;
+  }
+  
+  .dropdown1,
+  .dropdown2 {
+    background-color: transparent !important; 
+  }
+  
+  .dropdown1:hover,
+  .dropdown2:hover {
+    color: rgb(102, 102, 102); 
+  }
+  

@@ -7,34 +7,40 @@ const MainNav = () => {
     const profilePicStyle = {
         width: '30px',
         height: '30px',
-        borderRadius: '50%', // Makes the image round
-        objectFit: 'cover', // Ensures the image covers the area without stretching
+        borderRadius: '50%', 
+        objectFit: 'cover', 
       };
 
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary fixed-top">
         <Container>
-          <Navbar.Brand><Link href="/" legacyBehavior>Elle Hacks</Link></Navbar.Brand>
+        <Navbar.Brand>
+            <Link href="/" legacyBehavior>
+              <div className={styles.navbarBrand}>
+                <img src="/logo1.png" alt="Logo" className={styles.logo} />
+                <span className={styles.brandText}>WinterWay</span>
+              </div>
+            </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            {/* Adjusted from me-auto to ms-auto */}
+          <Navbar.Collapse id="basic-navbar-nav" className={styles.toggle}>
+            {}
             <Nav className="ms-auto">
               <Link href="/maps" passHref legacyBehavior>
-                <Nav.Link>Map</Nav.Link>
+                <Nav.Link className={styles.navbarLink1}>Map</Nav.Link>
               </Link>
-              <Link href="/about" passHref legacyBehavior>
-                <Nav.Link>About</Nav.Link>
+              <Link href="/about" passHref legacyBehavior >
+                <Nav.Link className={styles.navbarLink2}>About</Nav.Link>
               </Link>
               <NavDropdown 
-                title={<img src="https://via.placeholder.com/150" alt="Profile" style={profilePicStyle} />} 
+                title={<img src="/user.png" alt="Profile" style={profilePicStyle} />} 
                 id="basic-nav-dropdown" 
                 align="end"
                 >
-                <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdown1} href="#action/3.2">Another action</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+                <NavDropdown.Item className={styles.dropdown2} href="#action/3.4">Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

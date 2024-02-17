@@ -1,0 +1,28 @@
+/*.pageContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    background-color: #b4b4b4; 
+  }
+  
+  .aboutContainer {
+    padding: 20px;
+    max-width: 600px; 
+  }
+  */
+  .pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/background2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .aboutContainer {
+    padding: 20px;
+    max-width: 600px;
+  }
+  
