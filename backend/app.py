@@ -8,7 +8,7 @@ from geopy.distance import geodesic
 app = Flask(__name__)
 
 global apikey
-apikey = 'AIzaSyD1R-t5hc-eZSt4XgBERbF6AWUdw2tnak4'
+apikey = 'KEY'
 
 #import bus shelter CSV information, to change to database call probably lol
 def load_shelters_from_csv(csv_file):
@@ -120,6 +120,9 @@ def start_routing():
     api_key = apikey
 
     ## receive points from front end, convert to geopoints
+    data = request.json  # Assuming JSON data is sent from the frontend
+    start_point = data.get('start_point')
+    end_point = data.get('end_point')
 
     
     start_point = {'latitude': float(43.850910), 'longitude': float(-79.313790)}
@@ -139,11 +142,11 @@ def start_routing():
     #overview_polyline_points = route_info['routes'][0]['overview_polyline']['points']
     #print("Overview Polyline Points:", overview_polyline_points)
 
-    for leg in route_info['routes'][0]['legs']:
-        for step in leg['steps']:
-            if 'polyline' in step:
-                step_polyline_points = step['polyline']['points']
-                print("Step Polyline Points:", step_polyline_points)
+    #for leg in route_info['routes'][0]['legs']:
+        #for step in leg['steps']:
+            #if 'polyline' in step:
+                #step_polyline_points = step['polyline']['points']
+                #print("Step Polyline Points:", step_polyline_points)
 
     #print(route_info)
     #print(jsonify(route_info))
