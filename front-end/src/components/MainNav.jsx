@@ -15,7 +15,7 @@ const MainNav = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary fixed-top">
         <Container>
-          <Navbar.Brand>Elle Hacks</Navbar.Brand>
+          <Navbar.Brand><Link href="/" legacyBehavior>Elle Hacks</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             {/* Adjusted from me-auto to ms-auto */}
