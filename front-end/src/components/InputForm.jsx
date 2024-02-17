@@ -10,6 +10,21 @@ const InputForm = () => {
     },
     onSubmit: async (values) => {
       console.log("Form values are valid:", values);
+
+      try {
+        const response = await axios.post('http://localhost:8080/calculate', {
+        startingLocation: startingLocation,
+        destinationLocation: destinationLocation,
+      });
+
+      if (!response.okay) {
+        throw new Error('Something went wrong');
+      }
+      // manage this data
+      console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
     },
     validate: (values) => {
       let errors = {};
