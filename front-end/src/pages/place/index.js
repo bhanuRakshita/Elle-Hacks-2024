@@ -1,8 +1,6 @@
 import { useMyContext } from "@/context/transitroute-context";
-import InputForm from "@/components/InputForm";
 import CurrentMap from "@/components/CurrentMap";
 import styles from "./place.module.css";
-
 
 const Place = () => {
     const { state, updateState } = useMyContext();
@@ -15,7 +13,7 @@ const Place = () => {
                 <h3>We've got you covered with an actual TTC shed all through your trip!</h3>
             </div>
             <div className={styles.right}>
-                <CurrentMap/>
+                <CurrentMap route={state}/>
             </div>
         </div>
  

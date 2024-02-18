@@ -11,21 +11,18 @@ const InputForm = () => {
       destinationLocation: "",
     },
     onSubmit: async (values) => {
-      console.log("Form values are valid:", values);
 
       try {
         const response = await axios.post("http://127.0.0.1:5000/calculate", {
           startingLocation: values.startingLocation,
           destinationLocation: values.destinationLocation,
         });
-        console.log('!!!!!!!!!!!!!');
-        console.log(response);
-        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
+        console.log('!!!!!!111');
+        console.log(response.data);
+        updateState(response.data);
 
       } catch (error) {
         console.log(error);
-        ////////////////////////////////////////
-        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
       }
     },
     validate: (values) => {
