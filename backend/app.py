@@ -21,7 +21,12 @@ def start_routing():
     # Retrieve the API key from environment variables
     api_key = os.environ.get('GOOGLE_MAPS_API_KEY')
 
-    ## receive points from front end, convert to geopoints   
+    ## receive points from front end, convert to geopoints
+    data = request.json  # Assuming JSON data is sent from the frontend
+    start_point = data.get('start_point')
+    end_point = data.get('end_point')
+
+    
     start_point = {'latitude': float(43.850910), 'longitude': float(-79.313790)}
     end_point = {'latitude': float(43.8339576), 'longitude': float(-79.3204871)}
 
@@ -43,6 +48,9 @@ def start_routing():
             if 'polyline' in step:
                 step_polyline_points = step['polyline']['points']
                 print("Step Polyline Points:", step_polyline_points)
+
+    #print(route_info)
+    #print(jsonify(route_info))
 
     return jsonify(route_info)
 

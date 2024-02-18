@@ -1,6 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import { geoCode } from "@/utils/geoCode";
+import axios from 'axios';
 
 const InputForm = () => {
   const formik = useFormik({
@@ -9,6 +10,25 @@ const InputForm = () => {
       destinationLocation: "",
     },
     onSubmit: async (values) => {
+<<<<<<< HEAD
+=======
+      console.log("Form values are valid:", values);
+
+      try {
+        const response = await axios.post('http://localhost:8080/calculate', {
+        startingLocation: startingLocation,
+        destinationLocation: destinationLocation,
+      });
+
+      if (!response.okay) {
+        throw new Error('Something went wrong');
+      }
+      // manage this data
+      console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+>>>>>>> 72bffb11f994f20e74006e5696fdcc32c320d93c
     },
     validate: (values) => {
       let errors = {};
