@@ -160,14 +160,14 @@ def start_routing():
     start_shelter = find_closest_shelter(coordinates[0], shelters)
     end_shelter = find_closest_shelter(coordinates[1], shelters)
 
-    start2 = {'latitude': float(start_shelter[1]), 'longitude': float(start_shelter[2])}
-    end2 = {'latitude': float(end_shelter[1]), 'longitude': float(end_shelter[2])}
+    start2 = {'latitude': float(start_shelter['latitude']), 'longitude': float(start_shelter['longitude'])}
+    end2 = {'latitude': float(end_shelter['latitude']), 'longitude': float(end_shelter['longitude'])}
 
     # Process transit routes and adjust for shelters
     route_info = process_transit_routes(start2, end2, shelters)
 
     #print(route_info)
-    #print(jsonify(route_info))
+    print(jsonify(route_info))
 
     return jsonify(route_info)
 

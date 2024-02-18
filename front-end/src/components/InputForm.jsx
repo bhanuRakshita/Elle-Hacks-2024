@@ -19,13 +19,10 @@ const InputForm = () => {
           destinationLocation: values.destinationLocation,
         });
         console.log('!!!!!!!!!!!!!');
-        console.log(response);
-        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
+        updateState(response.data.routes);
 
       } catch (error) {
         console.log(error);
-        ////////////////////////////////////////
-        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
       }
     },
     validate: (values) => {
