@@ -1,50 +1,65 @@
 .navbarLink2{
-    margin-right: 20%;
-    color:black;
+  margin-right: 20%;
+  color:black;
 }
 .navbarLink1{
-    margin-right: 20%;
-    color:black;
+  margin-right: 20%;
+  color:black;
+}
+
+.brandText {
+  color:black;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500; 
+}
+
+.brandText:hover {
+  color: rgb(41, 54, 131);
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500; 
 }
 
 .navbarLink2:hover{
-    color:rgb(102, 102, 102);
+  color: rgb(41, 54, 131);
 }
 
 .navbarLink1:hover{
-    color:rgb(102, 102, 102);
+  color: rgb(41, 54, 131);
 }
+
 .profile {
-    margin-right: 20%;
-    color:black;
+  margin-right: 20%;
+  color:black;
 }
 
 .profile:hover {
-    filter: brightness(50%);
+  filter: brightness(50%);
 }
 
 .navbarBrand {
-    display: flex; 
-    align-items: center; 
-  }
+  display: flex; 
+  align-items: center; 
+}
   
-  .logo {
-    width: 60px; 
-    height: auto;
-    margin-right: 10px; 
-  }
+.logo {
+  width: 60px; 
+  height: auto;
+  margin-right: 10px; 
+}
 
-  .toggle {
-    margin-right: 5%;
-  }
+.toggle {
+  margin-right: 5%;
+}
   
-  .dropdown1,
-  .dropdown2 {
-    background-color: transparent !important; 
-  }
+.dropdown1,
+.dropdown2 {
+  background-color: transparent !important; 
+}
   
-  .dropdown1:hover,
-  .dropdown2:hover {
-    color: rgb(102, 102, 102); 
-  }
+.dropdown1:hover,
+.dropdown2:hover {
+  color: rgb(102, 102, 102); 
+}
   
