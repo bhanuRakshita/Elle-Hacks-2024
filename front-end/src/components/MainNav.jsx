@@ -19,6 +19,7 @@ const MainNav = () => {
             <Link href="/" legacyBehavior>
               <div className={styles.navbarBrand}>
                 <img src="/logo1.png" alt="Logo" className={styles.logo} />
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" />
                 <span className={styles.brandText}>WinterWay</span>
               </div>
             </Link>
@@ -33,15 +34,7 @@ const MainNav = () => {
               <Link href="/about" passHref legacyBehavior >
                 <Nav.Link className={styles.navbarLink2}>About</Nav.Link>
               </Link>
-              <NavDropdown 
-                title={<img src="/user.png" alt="Profile" style={profilePicStyle} />} 
-                id="basic-nav-dropdown" 
-                align="end"
-                >
-                <NavDropdown.Item className={styles.dropdown1} href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item className={styles.dropdown2} href="#action/3.4">Logout</NavDropdown.Item>
-              </NavDropdown>
+ 
             </Nav>
           </Navbar.Collapse>
         </Container>
