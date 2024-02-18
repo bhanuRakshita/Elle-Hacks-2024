@@ -10,8 +10,6 @@ const InputForm = () => {
       destinationLocation: "",
     },
     onSubmit: async (values) => {
-<<<<<<< HEAD
-=======
       console.log("Form values are valid:", values);
 
       try {
@@ -28,7 +26,6 @@ const InputForm = () => {
       } catch (error) {
         console.log(error);
       }
->>>>>>> 72bffb11f994f20e74006e5696fdcc32c320d93c
     },
     validate: (values) => {
       let errors = {};
