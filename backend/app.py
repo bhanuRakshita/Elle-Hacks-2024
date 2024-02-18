@@ -6,11 +6,13 @@ from flask import Flask, request, jsonify
 import json
 from geopy.distance import geodesic
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv()
 global apikey
 apikey = os.getenv('GOOGLE_MAPS_API_KEY')
 app = Flask(__name__)
+CORS(app)
 
 
 #import bus shelter CSV information, to change to database call probably lol
