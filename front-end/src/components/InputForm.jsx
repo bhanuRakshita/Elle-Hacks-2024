@@ -1,9 +1,10 @@
 import React from "react";
 import { useFormik } from "formik";
-import { geoCode } from "@/utils/geoCode";
-import axios from 'axios';
+import axios from "axios";
+import { useMyContext } from "@/context/transitroute-context";
 
 const InputForm = () => {
+  const { state, updateState } = useMyContext();
   const formik = useFormik({
     initialValues: {
       startingLocation: "",
@@ -13,18 +14,18 @@ const InputForm = () => {
       console.log("Form values are valid:", values);
 
       try {
-        const response = await axios.post('http://localhost:8080/calculate', {
-        startingLocation: startingLocation,
-        destinationLocation: destinationLocation,
-      });
+        const response = await axios.post("http://127.0.0.1:5000/calculate", {
+          startingLocation: values.startingLocation,
+          destinationLocation: values.destinationLocation,
+        });
+        console.log('!!!!!!!!!!!!!');
+        console.log(response);
+        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
 
-      if (!response.okay) {
-        throw new Error('Something went wrong');
-      }
-      // manage this data
-      console.log(response);
       } catch (error) {
         console.log(error);
+        ////////////////////////////////////////
+        updateState({'heloo':'fnjcn', 'rfrr':'rf'});
       }
     },
     validate: (values) => {

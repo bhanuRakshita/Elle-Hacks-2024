@@ -40,5 +40,16 @@ export default function CurrentMap() {
       options={options}
     >
     </GoogleMap>
-  ) : <div>Fetching location...</div>;
+  ) : (
+    <GoogleMap
+      mapContainerStyle={mapContainerStyle}
+      zoom={15}
+      center={{
+        lat: 43.718371, // Example latitude for New York City
+        lng: -79.5428663, // Example longitude for New York City
+      }}
+      options={options}
+    >
+    </GoogleMap>
+  );
 }
