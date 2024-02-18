@@ -48,7 +48,7 @@ const InputForm = () => {
       onSubmit={formik.handleSubmit}
       style={{
         background: "rgba(255, 255, 255, 0.8)",
-        padding: "20px",
+        padding: "60px",
         borderRadius: "8px",
       }}
     >

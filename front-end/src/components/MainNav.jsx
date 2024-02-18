@@ -13,8 +13,8 @@ const MainNav = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary fixed-top">
-        <Container>
+      <Navbar expand="lg" className="bg-body-tertiary fixed-top" >
+        <Container >
         <Navbar.Brand>
             <Link href="/" legacyBehavior>
               <div className={styles.navbarBrand}>
