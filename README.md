@@ -1,4 +1,7 @@
-# Elle-Hacks-2024
+# Winter Way
+## Elle-Hacks-2024
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yi6ymWK7IaA/0.jpg)](https://youtu.be/yi6ymWK7IaA)
 
 ## Inspiration
 How many times have you stood standing at the ttc bus stop, in snow and without a shed? Hands aching by the weight of groceries, making it even tougher for the elderly to travel, and the specially abled to take buses. Winter Way is a web application designed to assist users in finding safe routes during inclement weather, particularly in extremely cold conditions when waiting at exposed bus stops can pose risks to health. The app leverages information about shelter locations to suggest alternative routes that prioritize staying indoors or minimizing exposure to harsh weather conditions. Many of our team members are commuters, often having to brave the frigid Canadian winters.
